@@ -4,4 +4,4 @@ from harbor_kosa8.environment import Kosa8Environment, Kosa8EnvironmentOptions
 
 __all__ = ["Kosa8Environment", "Kosa8EnvironmentOptions"]
 
-__version__ = "0.1.0"
+__version__ = "0.2.0"
