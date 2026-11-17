@@ -42,6 +42,7 @@ from harbor_kosa8._kosa8 import (
     Kosa8TimeoutError,
     SandboxSession,
     adrive,
+    afiles_put,
 )
 
 ENVIRONMENT_TYPE = "kosa8"
@@ -178,7 +179,7 @@ class Kosa8Environment(BaseEnvironment):
 
     async def _run(self, op: Any) -> Any:
         client, sid = self._require()
-        return await adrive(op, lambda req: client.exec(sid, req))
+        return await adrive(op, lambda req: client.exec(sid, req), afiles_put(client, self._session, sid))
 
     # Lifecycle ---------------------------------------------------------------
 
