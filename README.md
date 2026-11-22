@@ -41,7 +41,7 @@ or in a job config:
 }
 ```
 
-Options go through `--ek key=value` (`--environment-kwarg`), for example `--ek template=node --ek region=eu-hel1`.
+Options go through `--ek key=value` (`--environment-kwarg`), for example `--ek template=node --ek region=us-ash1`.
 
 ### Images
 
@@ -55,7 +55,7 @@ kosa8 runs prebuilt images; it does not build Dockerfiles or compose files. By d
 | Option | Default | Meaning |
 |---|---|---|
 | `template` | `"python"` | kosa8 Cloud template the sandbox is created from (`GET /v1/templates` lists what your org can use). |
-| `region` | org default | Region id, such as `eu-hel1`. |
+| `region` | org default | Region id, such as `us-ash1`. |
 | `use_task_image` | `true` | Run commands in the task's `docker_image`. `false` uses the template's image. |
 | `image` | none | Image to run commands in instead of the task's. |
 | `ttl_s` | `21600` | Seconds until kosa8 Cloud deletes the sandbox even if the trial never stops it. |

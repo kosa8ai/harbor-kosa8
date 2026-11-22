@@ -64,7 +64,7 @@ class Kosa8EnvironmentOptions(EnvironmentOptions):
     """Options for ``--ek`` / ``environment.kwargs``."""
 
     template: str = Field(default="python", description="kosa8 Cloud template key the sandbox is created from.")
-    region: str | None = Field(default=None, description="Region id such as eu-hel1; the org default when unset.")
+    region: str | None = Field(default=None, description="Region id such as us-ash1; the org default when unset.")
     use_task_image: bool = Field(
         default=True,
         description=(
